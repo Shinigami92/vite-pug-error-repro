@@ -1,3 +1,16 @@
-div
-  img(:src="logo", alt="Vue logo") 
-  HelloWorld(msg="Hello Vue 2 + TypeScript + Vite")
+v-app#app
+  v-navigation-drawer(app, dark, fixed, overflow, permanent)
+    //- v Comment out this part v
+    template(v-slot:prepend)
+      span Nav Top
+    //- ^ Comment out this part ^
+    span Nav Body
+
+  v-app-bar(app)
+    span App Bar
+
+  v-main
+    span Main View
+
+  v-footer(app, dark, inset)
+    span App Footer
